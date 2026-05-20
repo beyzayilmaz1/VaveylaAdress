@@ -34,3 +34,4 @@ Ayrıntılı kurulum: **[backend/Vaveyla.Api/README.md](backend/Vaveyla.Api/READ
 SMTP başarısızsa kullanıcıya hata gösterilir; sahte başarı yoktur.
 "# VaveylaAdress" 
 "# VaveylaAdress" 
+"# VaveylaYorum" 
