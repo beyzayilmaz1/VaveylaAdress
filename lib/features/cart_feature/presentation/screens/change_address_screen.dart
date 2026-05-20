@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_sweet_shop_app_ui/core/models/user_address.dart'
     show AddressLabelType, UserAddress;
@@ -543,8 +544,13 @@ class _ChangeAddressScreenState extends State<ChangeAddressScreen> {
                         Expanded(
                           child: TextField(
                             controller: floorController,
+                            keyboardType: TextInputType.number,
+                            inputFormatters: [
+                              FilteringTextInputFormatter.digitsOnly,
+                            ],
                             decoration: InputDecoration(
                               labelText: 'Kat',
+                              hintText: 'örn. 3',
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
@@ -555,8 +561,13 @@ class _ChangeAddressScreenState extends State<ChangeAddressScreen> {
                         Expanded(
                           child: TextField(
                             controller: apartmentController,
+                            keyboardType: TextInputType.number,
+                            inputFormatters: [
+                              FilteringTextInputFormatter.digitsOnly,
+                            ],
                             decoration: InputDecoration(
                               labelText: 'Daire',
+                              hintText: 'örn. 12',
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
